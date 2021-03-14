@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <title>Login page</title>
+</head>
+
+<body>
+  <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-body border-bottom shadow-sm">
+    <p class="h5 my-0 me-md-auto fw-normal">Company name</p>
+    <nav class="my-2 my-md-0 me-md-3">
+      <a class="p-2 text-dark" href="/">Home</a>
+      <a class="p-2 text-dark" href="/login">Login</a>
+      <a class="p-2 text-dark" href="/register">Register</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h1>Login Form</h1>
+      </div>
+      <div class="card-body">
+        <form action="auth/login" method="POST">
+          <div class="col-12">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email">
+          </div>
+          <div class="col-12">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password">
+          </div>
+          <button type="submit" class="btn btn-primary mt-4">Login</button>
+        </form>
+      </div>
+      <div class="card-footer">
+        {{#if message}}
+        <h4 class="aler alert-danger">{{message}}</h4>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
